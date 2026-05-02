@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+/* Show the underline on hover */
+.group:hover hr {
+  @apply block;
+}
