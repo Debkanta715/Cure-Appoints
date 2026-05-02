@@ -18,19 +18,19 @@ const [token , setToken]=useState(true) // if we have token then we logged in //
       <ul className='hidden md:flex items-start gap-5 font-medium'>
         <NavLink to="/">
           <li className='hover:text-blue-500 cursor-pointer py-1'>HOME</li>
-          <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto '/>
+          <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden'/>
         </NavLink>
         <NavLink to="/doctors">
           <li className='hover:text-blue-500 cursor-pointer py-1'>ALL DOCTORS</li>
-          <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto '/>
+          <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden '/>
         </NavLink>
         <NavLink to="/about">
           <li className='hover:text-blue-500 cursor-pointer py-1'>ABOUT</li>
-          <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto '/>
+          <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden '/>
         </NavLink>
         <NavLink to="/contact">
           <li  className='hover:text-blue-500 cursor-pointer py-1'>CONTACT</li>
-          <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto '/>
+          <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden'/>
         </NavLink>
       </ul>
       <div className='flex item-center gap-4'>
@@ -46,7 +46,7 @@ const [token , setToken]=useState(true) // if we have token then we logged in //
               <div className='min-w-48 bg-stone-100 rounded flex flex-col gap-4 p-4'>
                 <p onClick={()=>navigate('/my-profile')} className='hover:text-black cursor-pointer'>My profile</p>
                 <p onClick={()=>navigate('/my-appontments')}  className='hover:text-black cursor-pointer' >My Appoints</p>
-                <p className='hover:text-black cursor-pointer'>Logout</p>
+                <p className='hover:text-black cursor-pointer' onClick={()=>setToken(false)}>Logout</p>
               </div>
             </div>
 
